@@ -1,0 +1,16 @@
+
+  
+  {
+    "welcome": "Welcome to my Mortgage Broker Website!",
+    "services": "Services",
+    "mortgage_types": "Mortgage Types",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "address": "Address",
+    "visa_type": "Visa Type",
+    "phone": "Phone",
+    "email": "Email",
+    "mortgage_amount": "Mortgage Amount",
+    "submit": "Submit"
+  }
+  

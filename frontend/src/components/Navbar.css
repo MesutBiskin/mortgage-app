@@ -1,0 +1,68 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #004F98; /* Navbar arka plan rengi, Footer ile aynı */
+    color: white;
+}
+  
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+  
+.logo h1 {
+    font-size: 20px;
+    margin: 0;
+}
+  
+.logo h2 {
+    font-size: 12px; /* NMLS yazısını daha küçük yapmak için */
+}
+  
+.menu {
+    display: flex;
+    list-style-type: none; /* Menüdeki linklerin sırasını düzeltmek için */
+}
+  
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px; /* Menü öğeleri arasındaki boşluğu artır */
+    font-size: 14px; /* Menüler için font boyutunu ayarlayın */
+    text-transform: capitalize; /* Baş harfleri büyük yapar */
+}
+  
+.menu a:hover {
+    color: #ddd;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+.right-side input {
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.right-side button {
+    background-color: #ddd;
+    color: #004F98;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.right-side button:hover {
+    background-color: #004F98; /* Hover durumunda buton rengi değişir */
+    color: white; /* Butonun yazı rengi beyaz olur */
+}
