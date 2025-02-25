@@ -5,6 +5,7 @@ import './i18n'; // i18n yapılandırmamızı dahil ediyoruz
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
 import Footer from './components/Footer';
+import MortgageTypes from './components/MortgageTypes'; // MortgageTypes bileşenini içeri aktarıyoruz
 
 function App() {
   const { t, i18n } = useTranslation(); // useTranslation hook'u ile dil desteğini alıyoruz
@@ -45,6 +46,9 @@ function App() {
       <div className="container">
         <h1>{t('welcome')}</h1> {/* Sayfa başlığı dil desteği ile değişecek */}
         <p>{t('services')}</p> {/* Servisler kısmı dil desteği ile değişecek */}
+
+        {/* Mortgage Türleri Box'larını ekliyoruz */}
+        <MortgageTypes /> {/* MortgageTypes bileşenini buraya ekliyoruz */}
 
         <form onSubmit={handleSubmit} className="mortgage-form">
           <h2>{t('mortgage_form')}</h2> {/* Form başlığı dil desteği ile değişecek */}
