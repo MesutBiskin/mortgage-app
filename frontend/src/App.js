@@ -38,20 +38,51 @@ function App() {
 
   return (
     <div className="App">
-      {/* Navbar bileşenine dil değiştirme fonksiyonu aktarıldı */}
       <Navbar handleLanguageChange={handleLanguageChange} />
-
       <Slider />
 
-      <div className="container">
-        <h1>{t('welcome')}</h1> {/* Sayfa başlığı dil desteği ile değişecek */}
-        <p>{t('services')}</p> {/* Servisler kısmı dil desteği ile değişecek */}
+      <div className="welcome-section">
+        <div className="message-content">
+          <h2>Mortgage dünyasına hoş geldiniz!</h2>
+          <p>
+            Ev sahibi olma yolculuğunuzda, karmaşık mortgage süreçlerini
+            basitleştirerek size özel çözümler sunuyoruz. Deneyimli bir mortgage
+            brokerı olarak, hayallerinizdeki eve ulaşmanız için size rehberlik
+            ediyor, en uygun kredi seçeneklerini titizlikle değerlendiriyoruz.
+            Finansal hedeflerinizi ve bireysel ihtiyaçlarınızı anlayarak, size
+            özel stratejiler geliştiriyor ve her adımda yanınızda oluyoruz. 
+            Amacımız, mortgage sürecini sizin için şeffaf, anlaşılır ve stressiz 
+            hale getirmek. Ev sahibi olma hayalinizi gerçeğe dönüştürmek için 
+            profesyonel desteğimizle yanınızdayız. Ücretsiz danışmanlık için hemen 
+            iletişime geçin.
+          </p>
+          <a href="mailto:info@mortgagebroker.com" className="contact-btn">
+            İletişime Geçin
+          </a>
+        </div>
+        <div className="message-image">
+          <img src="./images/1.jpeg" alt="Mortgage Broker" />
+        </div>
+      </div>
 
-        {/* Mortgage Türleri Box'larını ekliyoruz */}
-        <MortgageTypes /> {/* MortgageTypes bileşenini buraya ekliyoruz */}
+      <div className="container">
+        <h1>{t('welcome')}</h1> 
+        <p>{t('services')}</p>
+
+        <MortgageTypes />
+
+        <div className="images-section">
+          <h2>Görsellerimiz</h2>
+          <div className="image-gallery">
+            <img src="./images/birlik.jpg" alt="modern house exterior" />
+            <img src="./images/evrakmrtg.jpg" alt="modern house exterior 2" />
+            <img src="./images/faiz.jpg" alt="modern house exterior" />
+            <img src="./images/imza.jpg" alt="modern house exterior" />
+          </div>
+        </div>
 
         <form onSubmit={handleSubmit} className="mortgage-form">
-          <h2>{t('mortgage_form')}</h2> {/* Form başlığı dil desteği ile değişecek */}
+          <h2>{t('mortgage_form')}</h2>
 
           <label>{t('full_name')}</label>
           <input
@@ -101,7 +132,7 @@ function App() {
             onChange={handleChange}
           />
 
-          <button type="submit">{t('submit_button')}</button> {/* Submit butonu metni dil desteği ile değişecek */}
+          <button type="submit">{t('submit_button')}</button>
         </form>
       </div>
 

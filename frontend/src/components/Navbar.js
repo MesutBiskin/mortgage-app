@@ -35,10 +35,10 @@ const Navbar = ({ handleLanguageChange }) => {
         <button>{t('login')}</button>
 
         {/* Dil değiştirme butonları */}
-        <button onClick={() => handleLanguageChange('en')} aria-label="English">
+        <button className="language-btn" onClick={() => handleLanguageChange('en')} aria-label="English">
           ENG
         </button>
-        <button onClick={() => handleLanguageChange('tr')} aria-label="Turkish">
+        <button className="language-btn" onClick={() => handleLanguageChange('tr')} aria-label="Turkish">
           TR
         </button>
       </div>

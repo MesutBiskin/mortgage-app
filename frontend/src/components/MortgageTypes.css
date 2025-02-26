@@ -3,12 +3,13 @@
     justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 40px;
-  }
-  
-  .mortgage-box {
+    margin-top: 40px;  /* Slider'ın altından başlayacak şekilde margin ekliyoruz */
+    position: relative;
+}
+
+.mortgage-box {
     background-color: #ffffff;
-    border-radius: 16px; /* Kutucukların köşelerini ovalleştiriyoruz */
+    border-radius: 16px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -17,15 +18,16 @@
     height: 250px;
     opacity: 0.9;
     cursor: pointer;
-    overflow: hidden; /* Grafiklerin taşmasını engeller */
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .mortgage-box:hover {
+}
+
+.mortgage-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     background-color: #e3f2fd;
-  }
+}
+
   
   .mortgage-title {
     font-size: 1.3rem;

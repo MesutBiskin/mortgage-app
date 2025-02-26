@@ -1,4 +1,3 @@
-// src/components/Slider.js
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
 
@@ -7,7 +6,7 @@ const Slider = () => {
       { id: 1, image: '/images/image1.jpeg', caption: 'Görsel 1 Açıklaması' },
       { id: 2, image: '/images/image2.jpg', caption: 'Görsel 2 Açıklaması' },
       { id: 3, image: '/images/image3.jpg', caption: 'Görsel 3 Açıklaması' },
-      { id: 3, image: '/images/image4.jpg', caption: 'Görsel 3 Açıklaması' },
+      { id: 4, image: '/images/image4.jpg', caption: 'Görsel 4 Açıklaması' }, // Hatalı id düzeltildi
     ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,7 +17,7 @@ const Slider = () => {
     }, 5000); // 5 saniye aralıklarla slide değişimi
 
     return () => clearInterval(interval); // cleanup
-  }, [slides.length]); // slides.length bağımlılığını buraya ekliyoruz
+  }, [slides.length]);
 
   return (
     <div className="slider">

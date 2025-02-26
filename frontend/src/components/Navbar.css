@@ -1,46 +1,65 @@
 /* Navbar */
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #004F98; /* Navbar arka plan rengi, Footer ile aynı */
+    background: linear-gradient(45deg, #003366, #0066CC); /* Koyu mavi tonundan açık mavi tonuna */
     color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
-  
+
+/* Diğer stil kuralları burada aynı kalacak */
+
+
+/* Logo */
 .logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
-  
+
 .logo h1 {
     font-size: 20px;
     margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500; /* Modern yazı tipi */
 }
-  
+
 .logo h2 {
-    font-size: 12px; /* NMLS yazısını daha küçük yapmak için */
+    font-size: 12px;
 }
-  
+
+/* Menü */
 .menu {
     display: flex;
-    list-style-type: none; /* Menüdeki linklerin sırasını düzeltmek için */
+    list-style-type: none;
 }
-  
+
 .menu a {
     color: white;
     text-decoration: none;
-    margin-right: 20px; /* Menü öğeleri arasındaki boşluğu artır */
-    font-size: 14px; /* Menüler için font boyutunu ayarlayın */
-    text-transform: capitalize; /* Baş harfleri büyük yapar */
-}
-  
-.menu a:hover {
-    color: #ddd;
+    margin-right: 20px;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+.menu a:hover {
+    color: #ddd;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1); /* Hoverda ölçek büyütme */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Side */
 .right-side {
     display: flex;
     align-items: center;
@@ -50,6 +69,8 @@
     padding: 5px;
     margin-right: 10px;
     font-size: 14px;
+    border-radius: 5px;
+    border: none;
 }
 
 .right-side button {
@@ -60,9 +81,104 @@
     font-size: 14px;
     cursor: pointer;
     margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .right-side button:hover {
-    background-color: #004F98; /* Hover durumunda buton rengi değişir */
-    color: white; /* Butonun yazı rengi beyaz olur */
+    background-color: #004F98;
+    color: white;
+}
+
+/* Language Button Styles */
+.language-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Menüsü ve Responsive Ayarlar */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #004F87;
+        padding: 20px 0;
+    }
+
+    .menu a {
+        padding: 15px 0;
+        margin-right: 0;
+    }
+
+    .navbar.open .menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .logo h2 {
+        font-size: 10px;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .right-side {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .logo h2 {
+        font-size: 8px;
+    }
+
+    .right-side {
+        display: none;
+    }
+
+    .hamburger {
+        font-size: 30px;
+    }
 }
