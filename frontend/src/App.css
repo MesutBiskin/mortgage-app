@@ -5,28 +5,32 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #f7f7f7; /* Yumuşak gri tonu */
-  background-image: url('https://www.transparenttextures.com/patterns/white-squares.png'); /* Hafif grid dokusu */
-  background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
-  background-attachment: fixed; /* Arka planın sabit olmasını sağlar */
+  background-color: #f4f4f4;
+  background-image: linear-gradient(to bottom, #f7f7f7, #ffffff); /* Hafif degrade ekleme */
+  background-attachment: fixed;
   color: #333; /* Yazı rengi için koyu gri */
-}
+  }
+  
+
 
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1C3D5A; /* Koyu lacivert */
+  background-color: #1C3D5A;
   color: white;
   padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
 }
 
 .navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 0 20px;
-  font-weight: bold;
+  transition: all 0.3s ease-in-out; /* Hover geçişleri için */
+}
+
+.navbar a:hover {
+  color: #FFD700; /* Altın renkli hover efekti */
+  transform: scale(1.1); /* Biraz büyütme */
 }
 
 .navbar a:hover {
@@ -39,7 +43,7 @@
 }
 
 /* Slider */
-.slider {
+.slider { 
   position: relative;
   width: 100%;
   height: 400px;
@@ -117,12 +121,20 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.mortgage-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: 600;
-  color: #333;
+.mortgage-form {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.mortgage-form button:hover {
+  background-color: #004080; /* Daha koyu hover rengi */
+  transform: translateY(-2px); /* Hafif yukarı kaldırma */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hover gölgelendirme */
 }
 
 .mortgage-form label {
@@ -219,11 +231,11 @@ footer a:hover {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
-  transition: transform 0.3s ease-in-out; /* Hover efekti */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti */
 }
 
 .image-item:hover {
-  transform: scale(1.05); /* Hover sırasında biraz büyür */
+  transform: scale(1.1); /* Hover sırasında büyütme */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Derinlik efekti */
 }
-
 
