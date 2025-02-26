@@ -49,15 +49,38 @@
     text-transform: capitalize;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Çizginin dışarı taşmaması için */
+    transition: color 0.3s ease, transform 0.3s ease; /* Metin rengi ve hareketi */
 }
 
-.menu a:hover {
-    color: #ddd;
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.1); /* Hoverda ölçek büyütme */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+/* Menü elemanına hover olduğunda altına çizgi ekleyelim ve animasyon ekleyelim */
+.menu a::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Çizgi kalınlığı */
+    background-color: #ddd;
+    transition: width 0.3s ease; /* Çizgi genişlemesi için animasyon */
 }
+
+/* Hover olduğunda metin sağa doğru kayacak ve alt çizgi genişleyecek */
+.menu a:hover {
+    color: #ddd; /* Metin renginin değişmesi */
+    transform: translateX(10px); /* Metnin sağa kayması */
+}
+
+/* Hover olduğunda alt çizgi genişler */
+.menu a:hover::after {
+    width: 100%; /* Çizgi tamamlanır */
+}
+
+
+
+/* Diğer stil kuralları */
+
 
 /* Right Side */
 .right-side {
